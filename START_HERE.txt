@@ -1,0 +1,379 @@
+PAPERDESK — OFFLINE PDF STUDIO / SOURCE + BUILD KIT
+
+This is a working application source package, NOT a completed native installer.
+Read docs/KADOMA-Getting-Started.pdf or README.md first.
+
+Version 0.28.2 lets external windows come to the front. KADOMA still opens
+maximised and on top, but when you open a mail compose window, printer
+preferences, a file in Explorer or Windows Settings, it steps aside so that
+window is visible. On-top behaviour returns when you come back to KADOMA.
+
+Version 0.28.1 removes the combine file count cap. Version 0.28 opens dark and combines files from Explorer:
+
+  * DARK BY DEFAULT. The moon/sun button still switches, and the choice sticks.
+  * RIGHT-CLICK TO COMBINE. Select any number of PDFs in Explorer, right-click,
+    "Combine with KADOMA PDF" - one document, named after the folder.
+
+Version 0.27 makes the fields usable everywhere, opens the window properly, and
+turns the email option into a real draft:
+
+  * FIELDS THAT WORK ELSEWHERE. Every field now carries the font resources and
+    the page link a strict reader needs before it will accept typing.
+  * THE WINDOW opens maximized and stays in front.
+  * EMAIL opens a new message in your mail program with the PDF attached and
+    the recipient box empty - you choose who gets it.
+
+Version 0.26 adds Prepare Form, raises the limit to 500 MB, and removes the
+built-in sample:
+
+  * PREPARE FORM. A new tool: it finds the places a form belongs (underscore
+    rules, drawn boxes, "Label:" lines) and adds real PDF fields anybody can
+    fill in - including date fields that Acrobat gives its own date picker.
+  * 500 MB. Uploads, working documents and exports.
+  * NO SAMPLE DOCUMENT. The application opens with nothing open.
+  * PRINT: orientation follows the page, paper starts at A4 and scales to fit,
+    and two-sided printing is offered when the printer supports it.
+  * EMAIL: the message can be edited, and starts as "Please see the attached file".
+
+Version 0.25 put paper and orientation in the print preview, opens at 150%, and
+gives the email draft the body it should have had:
+
+  * PAPER AND ORIENTATION IN THE PREVIEW. The sizes come from the printer driver,
+    the preview is drawn on the chosen sheet, and the job is printed on it.
+    Duplex, quality and trays stay in "Printer properties".
+  * DOCUMENTS OPEN AT 150%. The zoom control still overrides it.
+  * EMAIL WITH THE PDF ATTACHED now says "Please see the attached file".
+
+Version 0.24 put every tool beside the document, and copies a page out as a file:
+
+  * THE TOOL LIST, ON THE RIGHT. The same list the home screen shows now sits on
+    the right of the document too, so a tool is one press away while reading.
+    "All tools" in the menu bar hides it and brings it back.
+  * COPY PAGE TO A FILE. Right-click the page while scrolling, choose the name,
+    and that one page is written as a PDF of its own. The open document is not
+    changed.
+
+Version 0.23 added the four Acrobat tools the comparison listed as missing:
+
+  * STAMPS. Approved, Reviewed, Draft, Confidential, Final, For Public Release,
+    Void, or your own text. Placed where you click, with an optional date. The
+    label is real text, so it can be selected and searched.
+  * LINKS. Drag a box, then point it at a web address or a page in the same
+    document. The page's links are listed, and removable one at a time.
+  * PAGE SIZE. A3 to Tabloid, or a custom size in mm, points or inches. With
+    scaling on, the content, form fields, comments and links all move together.
+  * COMPARE. Two open documents, or a file from disk, compared page by page and
+    word by word: which pages differ, and what was added or removed on each.
+  docs/ACROBAT-PARITY.md compares the whole tool set with Acrobat Pro and says
+  what is still missing.
+
+Version 0.22 added a DOCUMENT view with seven tools Acrobat users reach for:
+
+  * WATERMARK. Text or an image, faded, rotated, tiled, on any page range.
+  * HEADER & FOOTER. Six slots with {page}, {pages}, {date}, {filename} tokens.
+  * PAGE NUMBERS and BATES numbering, with a starting number and padded digits.
+  * CROP. Margins in mm, points or inches; the page box is cropped, not rewritten.
+  * BOOKMARKS. Add, remove, or generate the outline from the document's headings.
+  * ATTACHMENTS. Files embedded in the PDF, extractable again.
+  * REDUCE SIZE. Image downsampling, font subsetting, object cleanup.
+  docs/ACROBAT-PARITY.md compares the whole tool set with Acrobat Pro and says
+  what is still missing.
+
+Version 0.21 made CLOSING QUIET unless there is something to save:
+
+  * NO PROMPT FOR A CLEAN DOCUMENT. Closing the window used to ask "close this
+    window?" every single time, even when nothing had been touched. It now closes
+    at once, and only asks - Save and close / Close without saving / Cancel - when
+    there are changes that are not in a file yet.
+
+Version 0.20 made SCANNED PAGES EDITABLE and added a DATE tool:
+
+  * DRAG OVER THE WORDS. A page that is a picture of text has nothing to click,
+    so the text tool draws instead: drag a box over the words and type the
+    replacement. The old ink is painted over with the colour sampled from the
+    paper around it, and the new text is written as real text. Empty the box to
+    erase an area.
+  * MAKE IT EDITABLE still runs local OCR, after which every line is clickable.
+  * THE DATE TOOL asks for a date — typed or picked — and writes it into the
+    page as selectable text where you click, in four formats. It works on scans.
+
+Version 0.19 trimmed the window title to the name:
+
+  * The title bar reads KADOMA PDF. "— Offline PDF Studio" is gone from the
+    window, the browser tab and the top of the getting-started guide. The
+    offline claim is still in the status bar, where it belongs.
+
+Version 0.18 added a PASSWORD PROMPT, EDITABLE SCANS, and a quieter top bar:
+
+  * PROTECTION ASKS. The Protect tool opens "Set a password." with the opening
+    password typed twice, an owner password and a message naming the problem.
+  * SCANS BECOME EDITABLE. A page that is a picture of text says so on the page,
+    and Make it editable runs local OCR and hands the text tool back.
+  * THE TOP BAR no longer carries the Workspace breadcrumb or the Offline badge.
+
+Version 0.17 added TABS, A SCROLLING PAGE VIEW, and nine fixes:
+
+  * TABS. One tab per open document, with a dot for unsaved changes and a close
+    button that asks to save first.
+  * SCROLLING. Every page is in one column now; scrolling changes the page you
+    are working on, and the editing layer follows it.
+  * RIGHT-CLICK a page for rotate left/right, extract, duplicate and delete.
+  * 500 MB documents (was 250 MB).
+  * 100% is the default zoom.
+  * A merged document is shown, scrolled to the pages that were added.
+  * Scans are explained, with a one-press route to OCR.
+  * Closing with unsaved changes offers Save and close.
+  * Printing reports how many sheets are going and gives up waiting after three
+    minutes instead of hanging.
+
+Version 0.16 added ODD / EVEN PAGE SELECTION to the Pages view:
+
+  * HALF THE DOCUMENT IN ONE PRESS. Select > Odd picks pages 1, 3, 5 and
+    Select > Even picks 2, 4, 6, beside All and None. The pages are highlighted
+    first, then Delete removes them — with the same confirmation and undo as any
+    other deletion.
+
+Version 0.15 added COLLATED AND UNCOLLATED copies to the print dialog:
+
+  * TWO COPIES, TWO WAYS. Collated prints a complete set per copy (1, 2, 3 then
+    1, 2, 3); uncollated prints a stack of each page (1, 1, 2, 2, 3, 3). The
+    dialog writes the order out with the real page numbers, so it can be checked
+    before anything is sent, and the button says "Print 4 pages x 2 copies".
+  * ONLY WHERE IT MEANS SOMETHING. The order control is disabled at one copy.
+
+Version 0.14 added PAGE TOOLS ON EVERY PAGE and a PRINT DIALOG THAT ASKED:
+
+  * PAGE TOOLS WHILE YOU SCROLL. The Pages view lists every page, and each one
+    carries rotate, extract and delete on the page itself. Split is beside Add
+    pages, and the Home screen has a Page tools group for all four.
+  * PRINT WHAT YOU MEAN. Pages (all, the current page, or a range like 1-3, 5),
+    Copies, and Printer properties…, which opens the printer driver's own
+    settings for paper, orientation and quality. The preview follows the range,
+    and the button says how many sheets will come out.
+
+Version 0.13 renamed the application to KADOMA PDF, gave it its own logo, and
+opened on a HOME SCREEN laid out like a PDF application:
+
+  * THE NAME AND THE MARK. KADOMA PDF everywhere: the window, the executable,
+    the installer, the registry, the share folder, the exports and the docs. The
+    supplied artwork is the only icon source, and every size is derived from it.
+  * A HOME SCREEN. Search tools, a Create & Edit grid, a Forms & Signatures
+    grid, and the same tools down the right, with the open documents under
+    Recent. Every card runs the real action, not a picture of one.
+  * IT STILL OPENS FOR READING once you are in a document: no text boxes, no
+    edit cursor, Edit text one press away.
+
+Version 0.12 opened for READING, added DARK MODE, and thinned the frame around the page:
+
+  * IT OPENS FOR READING. A document arrives in a reading view: the page as it
+    is, with no text boxes, no edit cursor and nothing waiting to be clicked.
+    Edit text is one press away, a double-click on any line still edits it
+    straight away, and Esc comes back to reading.
+  * DARK AND LIGHT. A moon button at the top right switches the whole interface.
+    The PAGE STAYS WHITE in both, because it is paper and should look the way it
+    will look on the printer. The choice is remembered between launches — it is
+    the only thing this application stores, and it holds nothing about a
+    document.
+  * A THINNER FRAME. The bars above the page are 61 px shorter and the document
+    bar's buttons are icons with their names on hover, so the page gains about
+    70 px of height and half a screen of width.
+
+Version 0.11 put a PRINT PREVIEW in front of the printer:
+
+  * PRINT PREVIEW, AND A PRINTER TO CHOOSE. The Print button and Ctrl / Command P
+    no longer fire a job at whatever printer happens to be default. They open a
+    window with the sheet on the left and the printers on the right.
+  * THE PREVIEW IS THE SHEET, NOT THE PAGE. Its paper size and its margins come
+    from the chosen printer, and the page is drawn inside them at the scale the
+    printer is given — so the preview cannot disagree with the paper. Choosing
+    another printer redraws it, because another printer may load another paper
+    size.
+  * PAGE BY PAGE. The arrows step through the document before anything is sent.
+  * A DRIVER THAT SAVES TO A FILE IS NAMED, NOT OFFERED. "Print to PDF", XPS,
+    OneNote and fax drivers would each wait on a Save dialog owned by another
+    process, so the preview says which one it skipped and why. Export instead is
+    one press away.
+
+Version 0.10 added SAVE and SAVE AS — the first way to write back to your own file:
+
+  * SAVE WRITES OVER THE FILE YOU OPENED, in one press, from the purple button or
+    Ctrl/⌘ S. SAVE AS asks where the copy should go and the document follows it,
+    so later saves keep writing there. It is the button beside it, or
+    Ctrl/⌘ Shift S.
+  * THE HEADER SAYS WHERE YOU STAND. "Saved" or "Unsaved changes", for the
+    document on screen, decided by the engine from the revision it last wrote.
+  * IT REFUSES RATHER THAN GUESSES. If the file changed on disk since you opened
+    it — a sync client, another editor — Save stops and tells you, instead of
+    replacing somebody else's work. Save as is still offered.
+  * A FAILED WRITE CANNOT CORRUPT A GOOD FILE. The PDF is written beside the
+    destination and moved into place in one step, so a half-written file never
+    lands on top of a working one. A password-protected file keeps its
+    encryption, both passwords and its permissions when saved over.
+  * NOTHING IS WRITTEN UNTIL YOU SAY SO. Opening, editing and closing still touch
+    no file. Only Save, Save as and export write anything.
+  * THE BROWSER PREVIEW CANNOT WRITE TO YOUR DISK, and says so, offering the
+    export instead. Saving is a desktop feature.
+
+Version 0.9 moved the MENU TO THE TOP and made the PAGE AS BIG AS IT WILL GO:
+
+  * A MENU ACROSS THE TOP. The tabs for Edit, Pages, Convert, Forms, Protect, OCR
+    and Read are now in a bar across the top, not down the left side. The chevron
+    on the left folds the whole bar away.
+  * PANELS YOU SWITCH. Three buttons in that bar: Pages (the thumbnail column),
+    Tools (the settings panel), and Focus (both away, so the page has the whole
+    window). The thumbnail column starts away — the Pages view already shows every
+    page when you want to look at them — and the page begins at the left edge of
+    the window.
+  * THE PAGE AS LARGE AS THE WINDOW ALLOWS. Fit width now genuinely fills the
+    width. It used to stop at 125%, which left a quarter of an ordinary window
+    empty. The page is rendered at the size it is shown, so it stays sharp when it
+    is large, and the zoom control still overrides the fit at any time: 50% to
+    300%, Fit width, Fit page, and zoom in / zoom out.
+
+Version 0.8 put EVERY TOOL ON ONE SIDE and added an AI READING view:
+
+  * ALL TOOLS ON THE LEFT. The view switcher, the page thumbnails and the tools
+    panel now share the left column, with the page filling everything to their
+    right. Nothing sits on the far side of the page any more. The tools panel
+    still pins open or auto-hides to a rail, and now opens towards the page.
+  * MERGE WHAT IS ALREADY OPEN, FIRST. The Merge window lists the documents
+    already open in KADOMA above the file picker — the quicker path — with an
+    "Add all" button when there is more than one. Two open documents can be
+    combined in one press, in either direction.
+  * AI READING, OFFLINE BY DEFAULT. A new Read view. Summarise gives an offline
+    extractive summary: the sentences that best represent the document, ranked by
+    word frequency and quoted as they stand, plus the document's key terms. Build
+    a form from a prompt turns ordinary words — "full name, email, date signed,
+    and a checkbox to agree" — into real PDF form fields, laid out on a new page
+    in one undoable step. Both run on this computer with no network.
+  * NEITHER IS A LANGUAGE MODEL, AND THE APP SAYS SO. The offline reading does not
+    paraphrase, does not invent and cannot answer questions. Every result is
+    tagged with which reading produced it.
+  * A MODEL IS OPTIONAL AND OFF. You may connect your own OpenAI-compatible
+    endpoint, model name and key. Then summaries are written by that model and
+    forms designed by it. Only the document's extracted text is sent — never the
+    file — and only after you agree to it. The key is kept in memory for the
+    session and is never written to disk. There is no account and no bundled key.
+
+Version 0.7 opened SEVERAL DOCUMENTS AT ONCE and let you put the TOOLS PANEL AWAY:
+
+  * SEVERAL DOCUMENTS OPEN. Opening a document no longer closes the one before
+    it. The workspace keeps the last six open, and the button beside the
+    document name lists them with their page count, size and whether they have
+    been edited. Switch between them there, or close one; the document on screen
+    asks first if it has unsaved changes.
+  * MERGE WHAT IS ALREADY OPEN. The Merge window lists the documents already
+    open in KADOMA under "Already open in KADOMA", with an Add button, so
+    one can be combined into another without being found on disk and uploaded
+    again. An open protected document is not unlocked twice, because the
+    password already used to open it is reused. Open documents and files from
+    disk can be mixed in any order. The document being merged into is listed but
+    cannot be added to itself for append/insert; building a new PDF from it is
+    allowed.
+  * A PANEL YOU CAN PUT AWAY. The tools panel on the right has a pin. Pinned —
+    the default, and what the interface always did — it stays open. Unpinned it
+    collapses to a narrow rail and comes back when you hover it, tab into it, or
+    press its tab, floating over the page so what you are reading never shifts
+    sideways. Clicking anywhere else or pressing Escape puts it back.
+
+  NOTE: documents are held in memory only. Closing one, or quitting, loses
+  anything not exported. There is no session restore, no tabs and no side-by-side
+  view — one document is on screen at a time and the rest wait in the switcher.
+
+Version 0.6 added a SPLIT WINDOW:
+
+  * SPLIT ONE PDF INTO SEVERAL FILES. Press Split and choose how the cuts are
+    decided: equal blocks of pages (10 pages each, say — use 1 for one PDF per
+    page), a number of files divided as evenly as the page count allows, or
+    your own page ranges (1-3, 4-6, 7-10), one file per range.
+  * YOU SEE EVERY FILE BEFORE IT EXISTS. The window lists each file it is about
+    to create, with the pages of that part in its name, and the button says how
+    many files you will get. One part comes back as a plain PDF; several arrive
+    as a single ZIP archive.
+  * REFUSALS, NOT SURPRISES. A range past the last page, more files than there
+    are pages, or a block size of zero is refused with the reason before
+    anything is written. A range that leaves pages out is allowed — extracting
+    part of a document is a real thing to want — but the window names the pages
+    that are in no part. Splitting only reads: your open document is not
+    changed and no undo step is recorded. Limits: 200 files, 240 MB of output.
+    A password-protected PDF cannot be split; unlock an authorized copy first.
+
+Version 0.5 added a MERGE WINDOW:
+
+  * COMBINE SEVERAL FILES IN ONE PLACE. Press Merge and add PDFs, images or
+    Office files. The window lists each one with its real page count, and you
+    can reorder the list, remove a file you picked by mistake, or take only
+    some pages of a source (2-3, 7) instead of all of it. A password-protected
+    file is unlocked in the window rather than refused.
+  * THREE DESTINATIONS. Add the result to the end of the document you have
+    open, insert it in front of any page of it, or build a brand-new PDF that
+    leaves the open document untouched. Dropping several files onto the window
+    opens the same list.
+  * NOTHING IS GUESSED. The button says how many pages the result will have,
+    and that count follows the page ranges you type. A range that runs past the
+    end of a file is refused rather than quietly shortened, and the whole
+    combine is one undoable step that leaves your document exactly as it was if
+    any file fails. Limits: unlimited files, 500 MB together, 500 pages.
+
+Version 0.4 added DATE FIELDS WITH A CALENDAR (a fourth field type beside Text,
+Checkbox and Dropdown: pick the format once, then filling the field opens a
+calendar instead of making you type a date; anything that is not a real date in
+that format is refused, so 31/02/2027 cannot slip through), PRINT STRAIGHT TO A
+PRINTER (every page rendered at print quality and sent to your printer directly,
+with no other PDF program involved, so the app's own buttons can never appear on
+paper; Ctrl+P does the same; printers that save to a file are explained rather
+than started), and CLEAR A FILLED-IN FORM (one button empties every filled value,
+leaves the fields and the page alone, and can be undone).
+
+Version 0.3 added ARABIC AND RIGHT-TO-LEFT TEXT (shaped, joined, laid out
+right-to-left, read back as the letters you typed, and searchable; the app
+measures the fonts on your machine and tells you whether it found an exact or
+only an approximate one), SEND / SHARE (build an email WITH the file attached,
+open a plain mail draft, copy the file itself, or show it in its folder —
+KADOMA never sends anything and stores no mail password; desktop only), and
+BE YOUR DEFAULT PDF APP (register KADOMA as a PDF handler for your user
+account, then confirm it in the Windows Settings page that opens; Windows
+desktop only).
+
+Version 0.2 added DIRECT ON-PAGE TEXT EDITING: click a line of text and type over
+it in place. Enter applies, Esc cancels, clicking away applies, and clearing the
+box deletes that line. Double-clicking text starts an edit under any tool. A
+longer line grows into free space and keeps its font size. Editing is one visual
+line at a time, not word-processor paragraph reflow.
+
+Windows: prebuilt executables are included —
+release\KADOMA-0.7.0-Windows-x64-standalone.exe is ONE FILE; copy it anywhere
+and run it, with no folder to keep beside it. First launch takes a few extra
+seconds while it unpacks itself.
+
+  NOTE: if you want KADOMA as your DEFAULT PDF APP, use the portable folder
+  build instead (release\KADOMA-0.7.0-Windows-x64-portable.zip). When you
+  double-click a PDF, a second copy of the app starts and must hand the file to
+  the running window. The one-file build unpacks its whole payload first, so that
+  handoff measured 33 to 38 seconds; the portable folder build does it in 2.3
+  seconds. Both work correctly, the folder build is just far quicker to react.
+
+Windows needs Microsoft Edge WebView2 (already present on Windows 11).
+
+Prefer to build it yourself? Install 64-bit Python (3.12 recommended), then run
+build-windows.cmd (portable folder + ZIP) or "python scripts/build.py --mode
+onefile" for the single EXE, or --mode both for everything. For Setup.exe,
+install Inno Setup 6 first. Check your download against release\SHA256SUMS.txt.
+
+Mac: use native Python on the intended Mac, then run bash build-macos.command.
+Build separately for Apple Silicon and Intel, or run the supplied three-job
+Desktop installers workflow in your repository. Keep the hidden .github folder.
+Native installers and real-OS GUI verification remain outstanding.
+
+From source: install requirements-desktop.txt in a virtual environment, then
+run desktop.py. Native builds are not production-signed/notarized.
+
+Optional engines: LibreOffice for Office-to-PDF; Tesseract for OCR.
+Signatures are visual images, not certificates. Cloud/AI/signature tracking
+are not included. Review FEATURES.md and QA_REPORT.md for actual scope.
+
+Hosted preview uploads leave your device. Use non-sensitive samples there.
+Desktop builds are designed to process locally. Export under a new filename
+if you want to preserve the original file.
+
+License: AGPL-3.0-or-later; read LICENSE and THIRD_PARTY_NOTICES.md.
